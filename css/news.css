@@ -1,0 +1,61 @@
+.web-base .infos-block {
+	margin: 60px auto 40px;
+}
+
+.infos-block .infos-left {
+	width: 448px;
+	height: 301px;
+	margin-right: 20px;
+}
+
+.infos-block .infos-desc {
+	flex: 1;
+}
+
+.infos-block .infos-desc .title {
+	font-size: 18px;
+	color: #333;
+
+	display: -webkit-box;
+	overflow: hidden;
+	/*! autoprefixer: ignore next */
+	-webkit-box-orient: vertical;
+	/* autoprefixer: on */
+	-webkit-line-clamp: 1;
+	text-overflow: ellipsis;
+}
+
+.infos-block .infos-desc .desc {
+	font-size: 14px;
+	color: #333;
+	margin-top: 25px;
+	line-height: 25px;
+	height: 180px;
+	text-indent: 2em;
+
+	display: -webkit-box;
+	overflow: hidden;
+	/*! autoprefixer: ignore next */
+	-webkit-box-orient: vertical;
+	/* autoprefixer: on */
+	-webkit-line-clamp:7;
+	text-overflow: ellipsis;
+}
+
+.infos-block .infos-desc .btn-block {
+	justify-content: flex-end;
+	margin-top: 22px;
+}
+
+.infos-block .infos-desc .get-more {
+	width: 105px;
+	height: 41px;
+	border: 1px solid #c40000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 14px;
+	color: #c40000;
+	margin-right: 10px;
+	cursor: pointer;
+}

@@ -1,0 +1,56 @@
+.web-base .content-block {
+	padding: 40px 0 80px;
+	background-color: #fff;
+}
+
+.web-base .content-block .title {
+	font-size: 25px;
+	color: #333;
+	line-height: 1.4;
+
+	/* display: -webkit-box;
+	overflow: hidden;
+	/*! autoprefixer: ignore next */
+	-webkit-box-orient: vertical;
+	/* autoprefixer: on */
+	-webkit-line-clamp: 1;
+	text-overflow: ellipsis;
+}
+
+.web-base .content-block .publish-date {
+	font-size: 13px;
+	color: #adadad;
+	margin: 30px 0 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #f0efef;
+}
+
+
+.web-base .content-block .content-display {
+	color: #333333;
+	font-size: 14px;
+	line-height: 2;
+}
+
+.web-base .content-block .content-display img {
+	max-width: 100%;
+}
+
+.web-base .share-block {
+	justify-content: flex-end;
+	align-items: center;
+	padding-top: 20px;
+	border-top:1px dashed #f0efef;
+	margin-top: 40px;
+}
+
+.web-base .share-block .share-i {
+	margin: 0 5px;
+}
+
+.web-base .share-block .share-i .share-img {
+	width: 33px;
+	height: 33px;
+	border-radius: 50%;
+	cursor: pointer;
+}

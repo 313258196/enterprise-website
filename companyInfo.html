@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+	<!-- 引入样式 -->
+	<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+	<!-- 引入组件库 -->
+	<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+	<link rel="stylesheet" href="./css/base.css">
+	<link rel="stylesheet" href="./css/companyInfo.css">
+</head>
+
+<body>
+	<div class="web-base" id="app">
+
+		<!-- header  -->
+		<div class="mainw">
+			<header class="df bet">
+				<div class="title">
+					<b>
+						<font color="#c40000">金融服务机构</font>
+					</b>
+					<b>
+						<font style="color: rgb(204, 204, 204);">模板</font>
+					</b>
+				</div>
+				<ul class="header-menu df fww">
+					<li class="menu-i"><a href="./index.html">首页</a></li>
+					<li class="menu-i active"><a href="#">公司概况</a></li>
+					<li class="menu-i"><a href="business.html">业务领域</a></li>
+					<li class="menu-i"><a href="news.html">新闻中心</a></li>
+					<li class="menu-i"><a href="culture.html">企业文化</a></li>
+				</ul>
+			</header>
+		</div>
+
+		<!-- bar  -->
+		<div class="bar-block">
+			<img src="./images/temp.jpg" class="bar-img" alt="">
+		</div>
+
+		<!-- company culture  -->
+		<div class="mainw company-culture">
+			<div class="cctab df jcc">
+				<template v-for="(item,index) in cctabList">
+					<div :key="index" class="cctab-i" :class="{active:cctabIndex == index}"
+						@mouseover="cctabIndex = index">{{item.label}}</div>
+					<div v-if="index != cctabList.length - 1" class="line"></div>
+				</template>
+			</div>
+			<div class="advantage-list" v-show="cctabIndex == 0">
+				<div class="advantage-list-item df fww">
+					<img src="./images/temp.jpg" class="advantage-item-img" alt="">
+					<div class="advantage-right">
+						<p class="title">灵活的投资方式</p>
+						<p class="content">
+							萨哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服
+						</p>
+					</div>
+				</div>
+				<div class="advantage-list-item reverse df fww">
+					<img src="./images/temp.jpg" class="advantage-item-img" alt="">
+					<div class="advantage-right">
+						<p class="title">灵活的投资方式</p>
+						<p class="content">
+							萨哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服
+						</p>
+					</div>
+				</div>
+				<div class="advantage-list-item df fww">
+					<img src="./images/temp.jpg" class="advantage-item-img" alt="">
+					<div class="advantage-right">
+						<p class="title">灵活的投资方式</p>
+						<p class="content">
+							萨哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服
+						</p>
+					</div>
+				</div>
+				<div class="advantage-list-item reverse df fww">
+					<img src="./images/temp.jpg" class="advantage-item-img" alt="">
+					<div class="advantage-right">
+						<p class="title">灵活的投资方式</p>
+						<p class="content">
+							萨哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服哈舒服
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="media-focus df fww" v-show="cctabIndex == 1">
+				<div class="infos">
+					<p>XXX为直属国有独资金融机构。2007年5月30日，国家工商总局正式换发了公司的营业执照。2014年4月，公司取得私募基金管理人资格。</p>
+					<p>根据国家工商总局核准，公司的经营范围是投资业务和资产管理。股东是财政部，性质是国有独资，注册资本金为45亿元。</p>
+					<p>公司的经营宗旨是利用各种资源和手段，为中小企业发展的各个阶段提供全方位的服务，是以实现公司与目标企业共同成长。</p>
+					<p>作为具有特殊历史背景的国有资产经营管理公司，在妥善处理历史问题的同时，公司以实践国家产业政策为己任，通过大力开展各类投融资业务，努力实现国家、社会和目标企业多赢。自2007年更名今，公司通过各项业务的开展，共实现盈利近127亿元，实现利润超过89亿元。
+					</p>
+					<p>此外公司与各地政府积极沟通，合作设立产业创投基金，支持区域经济和高新技术。</p>
+				</div>
+				<img src="./images/temp.jpg" class="img-cover" alt="">
+			</div>
+		</div>
+
+		<!-- footer  -->
+		<footer>
+			<div class="mainw">
+				<div class="df bet ftmain">
+					<div class="hot-line">
+						<p>
+							<img src="./images/mobile.webp" class="mobile" alt="">
+							<span class="hot-tit">客服服务热线</span>
+						</p>
+						<p>
+							<img src="./images/temp.jpg" class="mobile" alt="" style="visibility: hidden;">
+							<b class="hot-num">000-000-0000</b>
+						</p>
+					</div>
+					<ul class="menu-bar">
+						<li class="menu-bar-item"><a href="./index.html">首页</a></li>
+						<li class="menu-bar-item"><a href="./companyInfo.html">公司概况</a></li>
+						<li class="menu-bar-item"><a href="./business.html">业务领域</a></li>
+						<li class="menu-bar-item"><a href="./news.html">新闻中心</a></li>
+						<li class="menu-bar-item"><a href="./culture.html">企业文化</a></li>
+					</ul>
+				</div>
+				<div class="other-info">
+					<p class="df">©2022 - 我的网站 版权所有</p>
+					<p class="df">手机版 | 本站使用 凡科建站搭建 | 管理登录</p>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+
+	<script>
+		new Vue({
+			el: "#app",
+			data: {
+				cileftIndex: 0,
+				cileftList: [
+					{ label: "新闻资讯" },
+					{ label: "媒体聚焦" },
+				],
+				cctabIndex: 0,
+				cctabList: [
+					{ label: "企业文化" },
+					{ label: "媒体聚焦" },
+				],
+
+			},
+			methods: {
+				jump(num) {
+					let _this = this;
+					if (num) {
+						_this.$refs.elcarousel.next();
+					} else {
+						_this.$refs.elcarousel.prev();
+					}
+				}
+			}
+		})
+	</script>
+</body>
+
+</html>

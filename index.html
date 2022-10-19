@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+	<!-- 引入样式 -->
+	<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+	<!-- 引入组件库 -->
+	<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+	<link rel="stylesheet" href="./css/base.css">
+	<link rel="stylesheet" href="./css/index.css">
+	<script src="./js/base.js"></script>
+</head>
+
+<body>
+	<div class="web-base" id="app">
+
+		<!-- header  -->
+		<div class="mainw">
+			<header class="df bet">
+				<div class="title">
+					<b>
+						<font color="#c40000">金融服务机构</font>
+					</b>
+					<b>
+						<font style="color: rgb(204, 204, 204);">模板</font>
+					</b>
+				</div>
+				<ul class="header-menu df fww">
+					<li class="menu-i active"><a href="#">首页</a></li>
+					<li class="menu-i"><a href="./companyInfo.html">公司概况</a></li>
+					<li class="menu-i"><a href="business.html">业务领域</a></li>
+					<li class="menu-i"><a href="news.html">新闻中心</a></li>
+					<li class="menu-i"><a href="culture.html">企业文化</a></li>
+				</ul>
+			</header>
+		</div>
+
+		<!-- swiper  -->
+		<div class="swiper-block">
+			<el-carousel height="600px" indicator-position="none" arrow="never" ref="elcarousel">
+				<el-carousel-item v-for="item in 4" :key="item">
+					<img src="./images/temp.jpg" class="swiper-img" alt="">
+				</el-carousel-item>
+			</el-carousel>
+
+			<span class="arrow arrow-left" @click="jump(0)"></span>
+			<span class="arrow arrow-right" @click="jump(1)"></span>
+		</div>
+
+		<!-- company introduce -->
+		<div class="company-introduce">
+			<div class="mainw df bet-only">
+				<div class="cileft">
+					<div class="cileft-top df fww">
+						<div v-for="(item,index) in cileftList" :key="index" class="cileft-item"
+							:class="{active:cileftIndex == index}" @mouseover="cileftIndex = index">{{item.label}}</div>
+					</div>
+					<div class="cileft-bottom" v-show="cileftIndex == 0">
+						<div class="newsone df fww">
+							<a href="./articles.html" class="newsone-left" target="_blank"><img src="images/temp.jpg" alt=""></a>
+							<div class="newsone-right">
+								<p class="title">
+									<a href="./articles.html" target="_blank">
+										<b>在岸离岸人民币汇率大涨 专家称经济基本面支撑人民币稳定格局</b>
+									</a>
+								</p>
+								<p class="desc">将会使得2016年人民币弱势、美元强势周期背离的格局得到扭转，换言之。离岸人民币早盘一度创7个半月新高6.723</p>
+							</div>
+						</div>
+						<ul class="news-list">
+							<li class="news-ls-item">
+								<a href="" class="news-ls-item-a df bet">
+									<span class="news-title">萨看到就撒了开放进来撒开房记录卡萨解放啦</span>
+									<span class="news-date">2022-02-03</span>
+								</a>
+							</li>
+							<li class="news-ls-item">
+								<a href="" class="news-ls-item-a df bet">
+									<span class="news-title">萨看到就撒了开放进来撒开房记录卡萨解放啦</span>
+									<span class="news-date">2022-02-03</span>
+								</a>
+							</li>
+							<li class="news-ls-item">
+								<a href="" class="news-ls-item-a df bet">
+									<span class="news-title">萨看到就撒了开放进来撒开房记录卡萨解放啦</span>
+									<span class="news-date">2022-02-03</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="cileft-bottom" v-show="cileftIndex == 1">
+						<div class="newsone df fww">
+							<a href="./articles.html" class="newsone-left" target="_blank"><img src="images/temp.jpg" alt=""></a>
+							<div class="newsone-right">
+								<p class="title">
+									<a href="./articles.html" target="_blank">
+										<b>在岸离岸人民币汇率大涨 专家称经济基本面支撑人民币稳定格局222</b>
+									</a>
+								</p>
+								<p class="desc">将会使得2016年人民币弱势、美元强势周期背离的格局得到扭转，换言之。离岸人民币早盘一度创7个半月新高6.72322</p>
+							</div>
+						</div>
+						<ul class="news-list">
+							<li class="news-ls-item">
+								<a href="" class="news-ls-item-a df bet">
+									<span class="news-title">萨看到就撒了开放进来撒开房记录卡萨解放啦2</span>
+									<span class="news-date">2022-02-03</span>
+								</a>
+							</li>
+							<li class="news-ls-item">
+								<a href="" class="news-ls-item-a df bet">
+									<span class="news-title">萨看到就撒了开放进来撒开房记录卡萨解放啦2</span>
+									<span class="news-date">2022-02-03</span>
+								</a>
+							</li>
+							<li class="news-ls-item">
+								<a href="" class="news-ls-item-a df bet">
+									<span class="news-title">萨看到就撒了开放进来撒开房记录卡萨解放啦2</span>
+									<span class="news-date">2022-02-03</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="ciright">
+					<div class="ciright-title"><b>公司简介</b></div>
+					<div class="ciright-content">
+						<img src="./images/temp.jpg" class="company-cover" alt="">
+						<p class="company-desc">
+							身份卡是否可拉斯减身份卡是否可拉斯减身份卡是否可拉斯减身份卡是否可拉斯减身份卡是否可拉斯减身份卡是否可拉斯减身份卡是否可拉斯减身份卡是否可拉斯减身份卡是否可拉斯减身份卡是否可拉斯减身份卡是否可拉斯减肥啦
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- services  -->
+		<div class="services-block">
+			<div class="mainw df bet">
+				<div class="card-i">
+					<img src="./images/temp.jpg" class="card-i-cover" alt="">
+					<p class="card-i-title">资产管理</p>
+					<p class="card-i-desc">asd撒开了多久洒了可觉得拉时间浪费就撒了房间里间里间里间里间里间里间里间里间里间里</p>
+					<a class="card-i-more" href="./business.html" target="_blank">
+						<img src="./images/arrow-right-red.webp" class="arrow" alt="">
+						了解更多
+					</a>
+				</div>
+				<div class="card-i">
+					<img src="./images/temp.jpg" class="card-i-cover" alt="">
+					<p class="card-i-title">资产管理</p>
+					<p class="card-i-desc">asd撒开了多久洒了可觉得拉时间浪费就撒了房间里间里间里间里间里间里间里间里间里间里</p>
+					<a class="card-i-more" href="./business.html" target="_blank">
+						<img src="./images/arrow-right-red.webp" class="arrow" alt="">
+						了解更多
+					</a>
+				</div>
+				<div class="card-i">
+					<img src="./images/temp.jpg" class="card-i-cover" alt="">
+					<p class="card-i-title">资产管理</p>
+					<p class="card-i-desc">asd撒开了多久洒了可觉得拉时间浪费就撒了房间里间里间里间里间里间里间里间里间里间里</p>
+					<a class="card-i-more" href="./business.html" target="_blank">
+						<img src="./images/arrow-right-red.webp" class="arrow" alt="">
+						了解更多
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- company culture  -->
+		<div class="company-culture">
+			<div class="mainw">
+				<div class="cctab df jcc">
+					<template v-for="(item,index) in cctabList">
+						<div :key="index" class="cctab-i" :class="{active:cctabIndex == index}"
+							@mouseover="cctabIndex = index">{{item.label}}</div>
+						<div v-if="index != cctabList.length - 1" class="line"></div>
+					</template>
+				</div>
+				<div class="cccontent df fww" v-show="cctabIndex == 0">
+					<div class="cccontent-i"><img src="./images/temp.jpg" class="cccontent-img" alt=""></div>
+					<div class="cccontent-i more-block bgred">
+						<p class="title">人民币对美元中间价报6.7934元 上调1个基点</p>
+						<p class="content">6月6日电
+							据中国外汇交易中心的前沿数据显示，6月6日人民币对美元汇率中间价报6.7沿数据显示，6月6日人民币对美元汇率中间价报6.7沿数据显示，6月6日人民币对美元汇率中间价报6.7沿数据显示，6月6日人民币对美元汇率中间价报6.7沿数据显示，6月6日人民币对美元汇率中间价报6.7沿数据显示，6月6日人民币对美元汇率中间价报6.7沿数据显示，6月6日人民币对美元汇率中间价报6.7沿数据显示，6月6日人民币对美元汇率中间价报6.7沿数据显示，6月6日人民币对美元汇率中间价报6.7沿数据显示，6月6日人民币对美元汇率中间价报6.7沿数据显示，6月6日人民币对美元汇率中间价报6.7沿数据显示，6月6日人民币对美元汇率中间价报6.7沿数据显示，6月6日人民币对美元汇率中间价报6.7沿数据显示，6月6日人民币对美元汇率中间价报6.7沿数据显示，6月6日人民币对美元汇率中间价报6.7沿数据显示，6月6日人民币对美元汇率中间价报6.7沿数据显示，6月6日人民币对美元汇率中间价报6.7沿数据显示，6月6日人民币对美元汇率中间价报6.7沿数据显示，6月6日人民币对美元汇率中间价报6.7沿数据显示，6月6日人民币对美元汇率中间价报6.7沿数据显示，6月6日人民币对美元汇率中间价报6.7934元，上调1个基点。
+						</p>
+						<a href="./articles.html" target="_blank">
+							<div class="button">more</div>
+						</a>
+					</div>
+					<div class="cccontent-i more-block bgbrown">
+						<p class="title">人民币对美元中间价报6.7934元 上调1个基点</p>
+						<p class="content">6月6日电 据中国外汇交易中心的前沿数据显示，6月6日人民币对美元汇率中间价报6.7934元，上调1个基点。</p>
+						<a href="./articles.html" target="_blank">
+							<div class="button">more</div>
+						</a>
+					</div>
+					<div class="cccontent-i"><img src="./images/temp.jpg" class="cccontent-img" alt=""></div>
+				</div>
+				<div class="cccontent df fww" v-show="cctabIndex == 1">
+					<div class="cccontent-i"><img src="./images/temp.jpg" class="cccontent-img" alt=""></div>
+					<div class="cccontent-i more-block">
+						<p class="title">人民币对美元中间价报6.7934元 上调1个基点</p>
+						<p class="content">6月6日电
+							据中国外汇交易中心的前沿数据显示，6月6日人民币对美元汇率中间价报6.7沿数据显示，6月6日人民币对美元汇率中间价报6.7沿数据显示，6月6日人民币对美元汇率中间价报6.7沿数据显示，6月6日人民币对美元汇率中间价报6.7沿数据显示，6月6日人民币对美元汇率中间价报6.7沿数据显示，6月6日人民币对美元汇率中间价报6.7沿数据显示，6月6日人民币对美元汇率中间价报6.7沿数据显示，6月6日人民币对美元汇率中间价报6.7沿数据显示，6月6日人民币对美元汇率中间价报6.7沿数据显示，6月6日人民币对美元汇率中间价报6.7沿数据显示，6月6日人民币对美元汇率中间价报6.7沿数据显示，6月6日人民币对美元汇率中间价报6.7沿数据显示，6月6日人民币对美元汇率中间价报6.7沿数据显示，6月6日人民币对美元汇率中间价报6.7沿数据显示，6月6日人民币对美元汇率中间价报6.7沿数据显示，6月6日人民币对美元汇率中间价报6.7沿数据显示，6月6日人民币对美元汇率中间价报6.7沿数据显示，6月6日人民币对美元汇率中间价报6.7沿数据显示，6月6日人民币对美元汇率中间价报6.7沿数据显示，6月6日人民币对美元汇率中间价报6.7沿数据显示，6月6日人民币对美元汇率中间价报6.7934元，上调1个基点。
+						</p>
+						<a href="./articles.html" target="_blank">
+							<div class="button">more</div>
+						</a>
+					</div>
+					<div class="cccontent-i more-block">
+						<p class="title">人民币对美元中间价报6.7934元 上调1个基点</p>
+						<p class="content">6月6日电 据中国外汇交易中心的前沿数据显示，6月6日人民币对美元汇率中间价报6.7934元，上调1个基点。</p>
+						<a href="./articles.html" target="_blank">
+							<div class="button">more</div>
+						</a>
+					</div>
+					<div class="cccontent-i"><img src="./images/temp.jpg" class="cccontent-img" alt=""></div>
+				</div>
+			</div>
+		</div>
+
+		<!-- footer  -->
+		<footer>
+			<div class="mainw">
+				<div class="df bet ftmain">
+					<div class="hot-line">
+						<p>
+							<img src="./images/mobile.webp" class="mobile" alt="">
+							<span class="hot-tit">客服服务热线</span>
+						</p>
+						<p>
+							<img src="./images/temp.jpg" class="mobile" alt="" style="visibility: hidden;">
+							<b class="hot-num">000-000-0000</b>
+						</p>
+					</div>
+					<ul class="menu-bar">
+						<li class="menu-bar-item"><a href="./index.html">首页</a></li>
+						<li class="menu-bar-item"><a href="./companyInfo.html">公司概况</a></li>
+						<li class="menu-bar-item"><a href="./business.html">业务领域</a></li>
+						<li class="menu-bar-item"><a href="./news.html">新闻中心</a></li>
+						<li class="menu-bar-item"><a href="./culture.html">企业文化</a></li>
+					</ul>
+				</div>
+				<div class="other-info">
+					<p class="df">©2022 - 我的网站 版权所有</p>
+					<p class="df">手机版 | 本站使用 凡科建站搭建 | 管理登录</p>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+
+	<script>
+		new Vue({
+			el: "#app",
+			data: {
+				cileftIndex: 0,
+				cileftList: [
+					{ label: "新闻资讯" },
+					{ label: "媒体聚焦" },
+				],
+				cctabIndex: 0,
+				cctabList: [
+					{ label: "企业文化" },
+					{ label: "媒体聚焦" },
+				],
+
+			},
+			methods: {
+				jump(num) {
+					let _this = this;
+					if (num) {
+						_this.$refs.elcarousel.next();
+					} else {
+						_this.$refs.elcarousel.prev();
+					}
+				}
+			}
+		})
+	</script>
+</body>
+
+</html>

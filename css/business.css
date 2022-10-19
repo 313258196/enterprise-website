@@ -1,0 +1,30 @@
+.web-base .cards-block {
+	margin: 60px auto;
+}
+
+.cards-block .cardi {
+	width: 300px;
+	height: auto;
+}
+
+.cards-block .cardi .cardi-img {
+	width: 300px;
+	height: 180px;
+	display: block;
+}
+
+.cards-block .cardi .title {
+	width: 300px;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 18px;
+	color: #333;
+	background-color: #eee;
+}
+
+.business-notice {
+	font-size: 18px;
+	color: #333;
+}
